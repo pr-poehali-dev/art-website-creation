@@ -21,6 +21,13 @@ export default function Index() {
 
   const artworks = [
     {
+      id: 0,
+      title: "Семь смертных грехов и древо познания",
+      category: "Духовно-философская живопись",
+      description: "Аллегория связи между семью смертными грехами и первородным грехом. Круговая композиция с надкусанным яблоком в центре и семью руками, отражающими грехи и соответствующие чакры. Масло, холст, 90см, 2024г.",
+      image: "https://cdn.poehali.dev/files/aba8c1a5-e359-420a-8b0b-ab388d6cb395.jpg"
+    },
+    {
       id: 1,
       title: "Коллективное бессознательное",
       category: "Психоаналитическая живопись",
@@ -378,6 +385,171 @@ export default function Index() {
                   <p>• Атрибуты каждого архетипа</p>
                   <p>• Коллективное бессознательное</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Семь смертных грехов и древо познания */}
+      <section className="py-24 bg-gradient-to-b from-mystic-dark via-mystic-dark to-mystic-smoke relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.3)_80%)]"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-cinzel font-bold text-mystic-fog mb-6">
+              Семь смертных грехов<br />
+              <span className="text-gothic-gold">и древо познания</span>
+            </h2>
+            <div className="h-1 w-32 bg-gradient-to-r from-gothic-gold to-mystic-mustard mx-auto mb-8"></div>
+            <p className="text-xl font-cormorant text-mystic-fog/80 max-w-4xl mx-auto italic leading-relaxed">
+              Аллегория связи между христианскими смертными грехами и восточной концепцией чакр. 
+              Путь к пониманию природы человека через познание всех её граней.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            <div className="relative">
+              <div className="aspect-square rounded-full overflow-hidden shadow-2xl border-4 border-gothic-gold/30">
+                <img 
+                  src="https://cdn.poehali.dev/files/aba8c1a5-e359-420a-8b0b-ab388d6cb395.jpg"
+                  alt="Семь смертных грехов и древо познания"
+                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-1000"
+                />
+              </div>
+              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-gothic-gold to-mystic-mustard rounded-2xl p-4 shadow-xl">
+                <div className="text-center">
+                  <div className="text-2xl font-cinzel font-bold text-mystic-dark">90см</div>
+                  <div className="text-sm font-cormorant text-mystic-dark/70">холст • масло</div>
+                  <div className="text-xs font-cormorant text-mystic-dark/70">2024г</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <div className="space-y-6 font-cormorant text-lg leading-relaxed">
+                <p className="text-mystic-fog/90">
+                  В центре композиции — <span className="text-gothic-gold font-semibold">надкусанное яблоко</span> 
+                  как символ первородного греха и древа познания добра и зла.
+                </p>
+                <p className="text-mystic-fog/90">
+                  Семь рук расположены по кругу по часовой стрелке, каждая воплощает один из смертных грехов 
+                  и соответствует определённой чакре энергетической системы человека.
+                </p>
+                <p className="text-mystic-fog/90 italic">
+                  «Чтобы полностью понять природу человека, необходимо познать все его грани» — 
+                  как светлые, так и теневые стороны души.
+                </p>
+              </div>
+
+              <div className="bg-mystic-blue/10 backdrop-blur-sm border border-mystic-smoke/20 rounded-2xl p-6">
+                <h3 className="font-cinzel font-semibold text-mystic-fog mb-4 flex items-center">
+                  <Icon name="Zap" size={20} className="text-gothic-gold mr-3" />
+                  Концепция работы
+                </h3>
+                <div className="space-y-3 text-sm font-cormorant text-mystic-fog/80">
+                  <p>• Синтез христианской и восточной философии</p>
+                  <p>• Семь грехов как проявления блоков чакр</p>
+                  <p>• Круговая композиция — цикличность человеческой природы</p>
+                  <p>• Первородный грех как начало самопознания</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Детальный разбор семи грехов и чакр */}
+          <div className="bg-gradient-to-r from-mystic-blue/5 via-mystic-green/5 to-mystic-mustard/5 rounded-3xl p-12 border border-mystic-smoke/20">
+            <h3 className="text-3xl font-cinzel font-bold text-mystic-fog text-center mb-12">
+              Семь грехов • Семь чакр
+            </h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="bg-mystic-dark/80 backdrop-blur-sm border border-gothic-gold/20 p-6 text-center group hover:border-gothic-gold/40 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-red-600/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600/30 transition-colors">
+                  <Icon name="Apple" size={24} className="text-red-400" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-fog mb-2">Чревоугодие</h4>
+                <p className="text-xs font-cormorant text-mystic-fog/70 mb-3">Муладхара • 1 чакра</p>
+                <p className="text-sm font-cormorant text-mystic-fog/80 leading-relaxed">
+                  Зависимость тела, слабость к соблазнам корневых инстинктов
+                </p>
+              </Card>
+
+              <Card className="bg-mystic-dark/80 backdrop-blur-sm border border-gothic-gold/20 p-6 text-center group hover:border-gothic-gold/40 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-orange-600/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-600/30 transition-colors">
+                  <Icon name="Heart" size={24} className="text-orange-400" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-fog mb-2">Блуд</h4>
+                <p className="text-xs font-cormorant text-mystic-fog/70 mb-3">Свадхистана • 2 чакра</p>
+                <p className="text-sm font-cormorant text-mystic-fog/80 leading-relaxed">
+                  Неконтролируемая сексуальная энергия, блок сакральной чакры
+                </p>
+              </Card>
+
+              <Card className="bg-mystic-dark/80 backdrop-blur-sm border border-gothic-gold/20 p-6 text-center group hover:border-gothic-gold/40 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-yellow-600/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-600/30 transition-colors">
+                  <Icon name="Coins" size={24} className="text-yellow-400" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-fog mb-2">Алчность</h4>
+                <p className="text-xs font-cormorant text-mystic-fog/70 mb-3">Манипура • 3 чакра</p>
+                <p className="text-sm font-cormorant text-mystic-fog/80 leading-relaxed">
+                  Жажда власти и материального, искажение энергии солнечного сплетения
+                </p>
+              </Card>
+
+              <Card className="bg-mystic-dark/80 backdrop-blur-sm border border-gothic-gold/20 p-6 text-center group hover:border-gothic-gold/40 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-green-600/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600/30 transition-colors">
+                  <Icon name="Sword" size={24} className="text-green-400" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-fog mb-2">Гнев</h4>
+                <p className="text-xs font-cormorant text-mystic-fog/70 mb-3">Анахата • 4 чакра</p>
+                <p className="text-sm font-cormorant text-mystic-fog/80 leading-relaxed">
+                  Закрытое сердце, неспособность к любви и состраданию
+                </p>
+              </Card>
+
+              <Card className="bg-mystic-dark/80 backdrop-blur-sm border border-gothic-gold/20 p-6 text-center group hover:border-gothic-gold/40 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600/30 transition-colors">
+                  <Icon name="Eye" size={24} className="text-blue-400" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-fog mb-2">Зависть</h4>
+                <p className="text-xs font-cormorant text-mystic-fog/70 mb-3">Вишудха • 5 чакра</p>
+                <p className="text-sm font-cormorant text-mystic-fog/80 leading-relaxed">
+                  Неспособность к самовыражению, подавленная истина
+                </p>
+              </Card>
+
+              <Card className="bg-mystic-dark/80 backdrop-blur-sm border border-gothic-gold/20 p-6 text-center group hover:border-gothic-gold/40 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-indigo-600/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-600/30 transition-colors">
+                  <Icon name="CloudDrizzle" size={24} className="text-indigo-400" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-fog mb-2">Уныние</h4>
+                <p className="text-xs font-cormorant text-mystic-fog/70 mb-3">Аджна • 6 чакра</p>
+                <p className="text-sm font-cormorant text-mystic-fog/80 leading-relaxed">
+                  Потеря духовного видения, отсутствие высшей цели
+                </p>
+              </Card>
+
+              <Card className="bg-mystic-dark/80 backdrop-blur-sm border border-gothic-gold/20 p-6 text-center group hover:border-gothic-gold/40 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-violet-600/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-violet-600/30 transition-colors">
+                  <Icon name="Crown" size={24} className="text-violet-400" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-fog mb-2">Гордыня</h4>
+                <p className="text-xs font-cormorant text-mystic-fog/70 mb-3">Сахасрара • 7 чакра</p>
+                <p className="text-sm font-cormorant text-mystic-fog/80 leading-relaxed">
+                  Отрыв от божественного, иллюзия отделённости от целого
+                </p>
+              </Card>
+
+              <div className="bg-gradient-to-br from-gothic-gold/10 to-mystic-mustard/10 backdrop-blur-sm border border-gothic-gold/30 p-6 text-center">
+                <div className="w-12 h-12 rounded-full bg-gothic-gold/20 flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Apple" size={24} className="text-gothic-gold" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-fog mb-2">Первородный грех</h4>
+                <p className="text-xs font-cormorant text-mystic-fog/70 mb-3">Древо познания</p>
+                <p className="text-sm font-cormorant text-mystic-fog/80 leading-relaxed">
+                  Источник самосознания, начало пути познания добра и зла
+                </p>
               </div>
             </div>
           </div>
