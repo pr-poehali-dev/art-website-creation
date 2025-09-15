@@ -62,12 +62,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'artist-purple': '#7C3AED',
-				'artist-cyan': '#06B6D4',
-				'artist-pink': '#FF6B6B',
-				'artist-coral': '#FF7A6B',
-				'artist-navy': '#1E293B',
-				'artist-light': '#F8FAFC'
+				'mystic-mustard': '#A89164',
+				'mystic-blue': '#4A5568',
+				'mystic-green': '#4A5D4E',
+				'mystic-smoke': '#9CA3AF',
+				'mystic-fog': '#F7FAFC',
+				'mystic-dark': '#2D3748',
+				'mystic-cream': '#FDF6E3',
+				'gothic-gold': '#D4AF37'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -108,7 +110,8 @@ export default {
 			},
 			fontFamily: {
 				'playfair': ['Playfair Display', 'serif'],
-				'open': ['Open Sans', 'sans-serif']
+				'cormorant': ['Cormorant Garamond', 'serif'],
+				'cinzel': ['Cinzel', 'serif']
 			}
 		}
 	},

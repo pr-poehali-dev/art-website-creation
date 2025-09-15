@@ -22,256 +22,347 @@ export default function Index() {
   const artworks = [
     {
       id: 1,
-      title: "Абстрактная композиция",
-      category: "Живопись",
-      image: "/img/cb1c6106-eed6-4d3c-b3d9-f72a156ab94e.jpg"
+      title: "Туманная глубь",
+      category: "Мистическая живопись",
+      description: "Исследование подсознательных страхов через образы лесной мглы",
+      image: "/img/01e05285-6f09-4d68-a0ad-7b8266c5d108.jpg"
     },
     {
       id: 2,
-      title: "Портрет в стиле экспрессионизм",
-      category: "Портрет",
-      image: "/img/83adb3ff-60d6-464e-8d61-8f786b30ef98.jpg"
+      title: "Портрет души",
+      category: "Психологический портрет",
+      description: "Внутренний мир человека, выраженный через готические мотивы",
+      image: "/img/f43befb1-00b7-4bcd-9fca-72c6543a6f28.jpg"
     },
     {
       id: 3,
-      title: "Пейзаж мечты",
-      category: "Пейзаж",
-      image: "/img/acaad7d8-6044-4cb7-8866-3085817c11c6.jpg"
+      title: "Символы подсознания",
+      category: "Абстрактная композиция",
+      description: "Архетипические образы в современном прочтении",
+      image: "/img/c8a48cee-c928-453d-9132-d1d8a6692c81.jpg"
     },
     {
       id: 4,
-      title: "Цифровая абстракция",
-      category: "Цифровое искусство",
-      image: "/img/cb1c6106-eed6-4d3c-b3d9-f72a156ab94e.jpg"
+      title: "Призраки памяти",
+      category: "Концептуальное искусство",
+      description: "Работа с травматическим опытом через визуальные метафоры",
+      image: "/img/01e05285-6f09-4d68-a0ad-7b8266c5d108.jpg"
     },
     {
       id: 5,
-      title: "Модерн портрет",
-      category: "Портрет",
-      image: "/img/83adb3ff-60d6-464e-8d61-8f786b30ef98.jpg"
+      title: "Внутренний диалог",
+      category: "Психологический реализм",
+      description: "Борьба противоположностей в человеческой психике",
+      image: "/img/f43befb1-00b7-4bcd-9fca-72c6543a6f28.jpg"
     },
     {
       id: 6,
-      title: "Природные формы",
-      category: "Пейзаж",
-      image: "/img/acaad7d8-6044-4cb7-8866-3085817c11c6.jpg"
+      title: "Лабиринт сознания",
+      category: "Сюрреализм",
+      description: "Путешествие по закоулкам человеческого разума",
+      image: "/img/c8a48cee-c928-453d-9132-d1d8a6692c81.jpg"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-artist-purple via-artist-cyan to-artist-pink">
-      {/* Навигация */}
-      <nav className="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
-        <div className="max-w-6xl mx-auto px-6 py-4">
+    <div className="min-h-screen bg-gradient-to-b from-mystic-fog via-mystic-cream to-mystic-smoke/20">
+      {/* Мистическая навигация */}
+      <nav className="fixed top-0 w-full z-50 bg-mystic-dark/80 backdrop-blur-md border-b border-mystic-smoke/30">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-playfair font-bold text-white">
-              Мария Художник
-            </h1>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-white hover:text-artist-light transition-colors font-open">
-                Главная
-              </a>
-              <a href="#about" className="text-white hover:text-artist-light transition-colors font-open">
-                О художнике
-              </a>
-              <a href="#gallery" className="text-white hover:text-artist-light transition-colors font-open">
-                Галерея
-              </a>
-              <a href="#order" className="text-white hover:text-artist-light transition-colors font-open">
-                Заказать
-              </a>
-              <a href="#contacts" className="text-white hover:text-artist-light transition-colors font-open">
-                Контакты
-              </a>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-gothic-gold to-mystic-mustard rounded-full flex items-center justify-center">
+                <Icon name="Eye" size={20} className="text-mystic-dark" />
+              </div>
+              <h1 className="text-2xl font-cinzel font-semibold text-mystic-fog tracking-wider">
+                Алёна Петина
+              </h1>
             </div>
-            <Button variant="outline" className="md:hidden bg-white/20 border-white/30 text-white">
+            <div className="hidden md:flex space-x-8">
+              {['Главная', 'Наследие', 'Галерея', 'Философия', 'Заказать', 'Контакты'].map((item) => (
+                <a key={item} href={`#${item.toLowerCase()}`} className="text-mystic-fog hover:text-gothic-gold transition-colors font-cormorant text-lg">
+                  {item}
+                </a>
+              ))}
+            </div>
+            <Button variant="outline" className="md:hidden bg-mystic-dark/20 border-mystic-smoke/30 text-mystic-fog">
               <Icon name="Menu" size={20} />
             </Button>
           </div>
         </div>
       </nav>
 
-      {/* Героический блок */}
-      <section id="home" className="pt-20 pb-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-8 animate-fade-in">
-            <div className="inline-block p-1 bg-white/20 rounded-full animate-float">
-              <div className="bg-white/10 backdrop-blur-md rounded-full p-6">
-                <Icon name="Palette" size={48} className="text-white mx-auto" />
+      {/* Мистический героический блок */}
+      <section id="главная" className="pt-20 pb-20 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-mystic-dark/10 via-transparent to-mystic-green/10"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center space-y-12 animate-fade-in">
+            <div className="space-y-6">
+              <div className="inline-flex items-center space-x-4 bg-mystic-dark/10 backdrop-blur-sm rounded-full px-6 py-3 border border-mystic-smoke/20">
+                <Icon name="Sparkles" size={20} className="text-gothic-gold" />
+                <span className="font-cormorant text-mystic-dark text-lg">Род оренбургских художников</span>
+              </div>
+              
+              <h1 className="text-6xl md:text-8xl font-cinzel font-bold text-mystic-dark leading-tight">
+                Алёна<br />
+                <span className="text-mystic-blue">Петина</span>
+              </h1>
+              
+              <div className="max-w-4xl mx-auto space-y-4">
+                <p className="text-2xl md:text-3xl font-cormorant text-mystic-blue/80 italic">
+                  «Искусство как мост между видимым и невидимым»
+                </p>
+                <p className="text-lg font-cormorant text-mystic-dark/70 leading-relaxed">
+                  Художник, соединяющий классические традиции семейной династии Петиных 
+                  с современным пониманием психологии и мистических учений
+                </p>
               </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-playfair font-bold text-white leading-tight">
-              Искусство,<br />
-              которое <span className="text-artist-coral">вдохновляет</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-white/80 font-open max-w-3xl mx-auto">
-              Создаю уникальные произведения искусства, которые отражают красоту мира 
-              и глубину человеческих эмоций
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 size="lg" 
-                className="bg-artist-coral hover:bg-artist-pink text-white font-open font-semibold px-8 py-6 text-lg"
+                className="bg-mystic-blue hover:bg-mystic-dark text-mystic-fog font-cormorant font-semibold px-10 py-6 text-xl border border-mystic-smoke/30"
               >
-                Посмотреть работы
-                <Icon name="ArrowRight" size={20} className="ml-2" />
+                Исследовать работы
+                <Icon name="ArrowRight" size={24} className="ml-3" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-white/30 bg-white/10 text-white hover:bg-white/20 font-open font-semibold px-8 py-6 text-lg"
+                className="border-mystic-blue bg-transparent text-mystic-blue hover:bg-mystic-blue hover:text-mystic-fog font-cormorant font-semibold px-10 py-6 text-xl"
               >
-                Связаться со мной
+                Узнать о наследии
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* О художнике */}
-      <section id="about" className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-artist-navy">
-                О художнике
-              </h2>
-              <p className="text-lg font-open text-gray-700 leading-relaxed">
-                Я — профессиональный художник с более чем 10-летним опытом создания 
-                уникальных произведений искусства. Моя специализация — современная 
-                живопись, портреты и абстрактные композиции.
-              </p>
-              <p className="text-lg font-open text-gray-700 leading-relaxed">
-                Каждая работа создается с особым вниманием к деталям и глубоким 
-                пониманием эмоций, которые должно передать произведение. Я верю, 
-                что искусство может изменить пространство и настроение людей.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                {['Живопись маслом', 'Акварель', 'Цифровое искусство', 'Портреты'].map((skill) => (
-                  <span 
-                    key={skill}
-                    className="px-4 py-2 bg-artist-purple/10 text-artist-purple font-open font-medium rounded-full"
-                  >
-                    {skill}
-                  </span>
-                ))}
+      {/* Наследие династии */}
+      <section id="наследие" className="py-24 bg-mystic-dark text-mystic-fog">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Icon name="Crown" size={28} className="text-gothic-gold" />
+                  <h2 className="text-4xl md:text-5xl font-cinzel font-bold">
+                    Династия Петиных
+                  </h2>
+                </div>
+                <div className="h-1 w-24 bg-gradient-to-r from-gothic-gold to-mystic-mustard"></div>
+              </div>
+              
+              <div className="space-y-6 font-cormorant text-lg leading-relaxed">
+                <p className="text-mystic-fog/90">
+                  Алёна Петина принадлежит к знаменитому роду оренбургских художников и скульпторов, 
+                  чьё творческое наследие увековечено в Музее скульптуры имени Петиных в Оренбурге.
+                </p>
+                <p className="text-mystic-fog/90">
+                  Продолжая семейные традиции, она развивает уникальный стиль, сочетающий 
+                  классические техники с современным пониманием человеческой психики и 
+                  мистических аспектов бытия.
+                </p>
+                <p className="text-mystic-fog/90">
+                  Каждое произведение Алёны — это глубокое погружение в тайны сознания, 
+                  где искусство становится инструментом познания внутреннего мира человека.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Icon name="Museum" size={20} className="text-gothic-gold" />
+                    <span className="font-cinzel font-semibold">Музей скульптуры</span>
+                  </div>
+                  <p className="text-sm text-mystic-fog/70 font-cormorant">имени Петиных, Оренбург</p>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Icon name="Users" size={20} className="text-gothic-gold" />
+                    <span className="font-cinzel font-semibold">Династия</span>
+                  </div>
+                  <p className="text-sm text-mystic-fog/70 font-cormorant">Художников и скульпторов</p>
+                </div>
               </div>
             </div>
+
             <div className="relative">
-              <div className="relative z-10 bg-gradient-to-br from-artist-purple to-artist-cyan rounded-2xl p-8 text-white">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <Icon name="Award" size={24} />
-                    <span className="font-open font-semibold">15+ наград</span>
+              <div className="relative z-10 bg-gradient-to-br from-mystic-blue/20 to-mystic-green/20 backdrop-blur-sm rounded-3xl p-8 border border-mystic-smoke/20">
+                <div className="space-y-6">
+                  <div className="text-center space-y-3">
+                    <Icon name="Palette" size={48} className="text-gothic-gold mx-auto" />
+                    <h3 className="text-2xl font-cinzel font-semibold">Философия творчества</h3>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <Icon name="Users" size={24} />
-                    <span className="font-open font-semibold">200+ довольных клиентов</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Icon name="Clock" size={24} />
-                    <span className="font-open font-semibold">10+ лет опыта</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Icon name="Star" size={24} />
-                    <span className="font-open font-semibold">Персональные выставки</span>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-4">
+                      <Icon name="Circle" size={8} className="text-gothic-gold mt-2" />
+                      <div>
+                        <h4 className="font-cinzel font-medium">Психология в искусстве</h4>
+                        <p className="text-sm text-mystic-fog/70 font-cormorant">Исследование глубин человеческого сознания</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <Icon name="Circle" size={8} className="text-gothic-gold mt-2" />
+                      <div>
+                        <h4 className="font-cinzel font-medium">Мистические учения</h4>
+                        <p className="text-sm text-mystic-fog/70 font-cormorant">Поиск сакрального в повседневном</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <Icon name="Circle" size={8} className="text-gothic-gold mt-2" />
+                      <div>
+                        <h4 className="font-cinzel font-medium">Семейные традиции</h4>
+                        <p className="text-sm text-mystic-fog/70 font-cormorant">Наследие поколений художников</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-artist-pink to-artist-coral rounded-2xl transform rotate-3 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gothic-gold/20 to-mystic-mustard/20 rounded-3xl transform rotate-3 -z-10"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Галерея работ */}
-      <section id="gallery" className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-artist-navy mb-6">
-              Галерея работ
-            </h2>
-            <p className="text-xl font-open text-gray-600 max-w-3xl mx-auto">
-              Коллекция моих лучших произведений, созданных с любовью и вдохновением
-            </p>
+      {/* Галерея произведений */}
+      <section id="галерея" className="py-24 bg-gradient-to-b from-mystic-cream to-mystic-fog">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <div className="space-y-4">
+              <h2 className="text-5xl md:text-6xl font-cinzel font-bold text-mystic-dark">
+                Галерея произведений
+              </h2>
+              <div className="h-1 w-32 bg-gradient-to-r from-mystic-blue to-mystic-green mx-auto"></div>
+              <p className="text-xl font-cormorant text-mystic-dark/70 max-w-4xl mx-auto italic">
+                «Каждая картина — это диалог между художником и зрителем, 
+                где истина рождается в пространстве между видимым и невысказанным»
+              </p>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {artworks.map((artwork, index) => (
               <Card 
                 key={artwork.id} 
-                className="group overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group bg-mystic-fog/50 backdrop-blur-sm border border-mystic-smoke/30 overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="relative overflow-hidden">
                   <img 
                     src={artwork.image} 
                     alt={artwork.title}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-4 left-4 right-4 text-white">
-                      <span className="text-sm font-open bg-artist-purple px-3 py-1 rounded-full">
+                  <div className="absolute inset-0 bg-gradient-to-t from-mystic-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <span className="text-xs font-cormorant bg-gothic-gold text-mystic-dark px-3 py-1 rounded-full">
                         {artwork.category}
                       </span>
                     </div>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-playfair font-semibold text-artist-navy mb-2">
+                <CardContent className="p-8 space-y-4">
+                  <h3 className="text-2xl font-cinzel font-semibold text-mystic-dark">
                     {artwork.title}
                   </h3>
-                  <p className="text-gray-600 font-open">{artwork.category}</p>
+                  <p className="text-mystic-dark/60 font-cormorant leading-relaxed">
+                    {artwork.description}
+                  </p>
+                  <div className="pt-2">
+                    <Button variant="ghost" className="text-mystic-blue hover:text-gothic-gold font-cormorant p-0">
+                      Подробнее <Icon name="ArrowRight" size={16} className="ml-2" />
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Button 
               size="lg"
-              className="bg-artist-purple hover:bg-artist-navy text-white font-open font-semibold px-8 py-6"
+              className="bg-mystic-blue hover:bg-mystic-dark text-mystic-fog font-cormorant font-semibold px-12 py-6 text-xl"
             >
-              Посмотреть все работы
-              <Icon name="ExternalLink" size={20} className="ml-2" />
+              Исследовать полную коллекцию
+              <Icon name="ExternalLink" size={24} className="ml-3" />
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Заказ персональных работ */}
-      <section id="order" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-artist-navy mb-6">
-              Заказать персональную работу
+      {/* Философия творчества */}
+      <section id="философия" className="py-24 bg-mystic-dark text-mystic-fog">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-cinzel font-bold mb-6">
+              Философия творчества
             </h2>
-            <p className="text-xl font-open text-gray-600 max-w-3xl mx-auto">
-              Создам для вас уникальное произведение искусства, которое идеально впишется 
-              в ваш интерьер и отразит ваши предпочтения
+            <p className="text-xl font-cormorant italic max-w-4xl mx-auto">
+              Искусство как средство познания глубинных структур человеческого сознания
             </p>
           </div>
 
-          <Card className="p-8 shadow-xl">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-open font-semibold text-artist-navy">
+          <div className="grid md:grid-cols-3 gap-12">
+            <Card className="bg-mystic-blue/10 backdrop-blur-sm border border-mystic-smoke/20 p-8 text-center">
+              <Icon name="Brain" size={48} className="mx-auto mb-6 text-gothic-gold" />
+              <h3 className="text-xl font-cinzel font-semibold mb-4">Психология</h3>
+              <p className="font-cormorant text-mystic-fog/80 leading-relaxed">
+                Исследование архетипов, работа с подсознательными образами и травматическим опытом через визуальные метафоры
+              </p>
+            </Card>
+
+            <Card className="bg-mystic-green/10 backdrop-blur-sm border border-mystic-smoke/20 p-8 text-center">
+              <Icon name="Sparkles" size={48} className="mx-auto mb-6 text-gothic-gold" />
+              <h3 className="text-xl font-cinzel font-semibold mb-4">Мистицизм</h3>
+              <p className="font-cormorant text-mystic-fog/80 leading-relaxed">
+                Поиск сакрального смысла в повседневности, обращение к древним символам и эзотерическим традициям
+              </p>
+            </Card>
+
+            <Card className="bg-mystic-mustard/10 backdrop-blur-sm border border-mystic-smoke/20 p-8 text-center">
+              <Icon name="Palette" size={48} className="mx-auto mb-6 text-gothic-gold" />
+              <h3 className="text-xl font-cinzel font-semibold mb-4">Искусство</h3>
+              <p className="font-cormorant text-mystic-fog/80 leading-relaxed">
+                Синтез классических техник с современными подходами, создание уникального визуального языка
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Заказ персональных работ */}
+      <section id="заказать" className="py-24 bg-gradient-to-b from-mystic-fog to-mystic-cream">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-cinzel font-bold text-mystic-dark mb-6">
+              Заказать произведение
+            </h2>
+            <p className="text-xl font-cormorant text-mystic-dark/70 max-w-4xl mx-auto">
+              Создание персональной работы — это путешествие в глубины вашего внутреннего мира, 
+              воплощённое в уникальном художественном произведении
+            </p>
+          </div>
+
+          <Card className="bg-mystic-fog/70 backdrop-blur-sm border border-mystic-smoke/30 p-12 shadow-2xl">
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <label className="text-sm font-cinzel font-semibold text-mystic-dark">
                     Ваше имя *
                   </label>
                   <Input 
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     placeholder="Введите ваше имя"
-                    className="font-open"
+                    className="font-cormorant bg-mystic-fog/80 border-mystic-smoke/50"
                     required
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-open font-semibold text-artist-navy">
+                <div className="space-y-3">
+                  <label className="text-sm font-cinzel font-semibold text-mystic-dark">
                     Email *
                   </label>
                   <Input 
@@ -279,63 +370,64 @@ export default function Index() {
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     placeholder="your@email.com"
-                    className="font-open"
+                    className="font-cormorant bg-mystic-fog/80 border-mystic-smoke/50"
                     required
                   />
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-open font-semibold text-artist-navy">
-                    Тип работы *
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <label className="text-sm font-cinzel font-semibold text-mystic-dark">
+                    Тип произведения *
                   </label>
                   <Input 
                     value={formData.projectType}
                     onChange={(e) => setFormData({...formData, projectType: e.target.value})}
-                    placeholder="Портрет, пейзаж, абстракция..."
-                    className="font-open"
+                    placeholder="Портрет, психологическая композиция..."
+                    className="font-cormorant bg-mystic-fog/80 border-mystic-smoke/50"
                     required
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-open font-semibold text-artist-navy">
-                    Бюджет
+                <div className="space-y-3">
+                  <label className="text-sm font-cinzel font-semibold text-mystic-dark">
+                    Ориентировочный бюджет
                   </label>
                   <Input 
                     value={formData.budget}
                     onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                    placeholder="Ваш бюджет"
-                    className="font-open"
+                    placeholder="Укажите бюджет"
+                    className="font-cormorant bg-mystic-fog/80 border-mystic-smoke/50"
                   />
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-open font-semibold text-artist-navy">
-                  Описание проекта *
+              <div className="space-y-3">
+                <label className="text-sm font-cinzel font-semibold text-mystic-dark">
+                  Описание замысла *
                 </label>
                 <Textarea 
                   value={formData.description}
                   onChange={(e) => setFormData({...formData, description: e.target.value})}
-                  placeholder="Расскажите подробнее о желаемой работе: размер, цветовая гамма, стиль, особые пожелания..."
-                  className="font-open min-h-[120px]"
+                  placeholder="Поделитесь своими мыслями, эмоциями, образами, которые вы хотели бы видеть в произведении. Расскажите о личных переживаниях, символах, цветовых предпочтениях..."
+                  className="font-cormorant bg-mystic-fog/80 border-mystic-smoke/50 min-h-[150px]"
                   required
                 />
               </div>
 
-              <div className="bg-gradient-to-r from-artist-purple/10 to-artist-cyan/10 p-6 rounded-lg">
+              <div className="bg-gradient-to-r from-mystic-blue/10 to-mystic-green/10 p-8 rounded-2xl border border-mystic-smoke/30">
                 <div className="flex items-start space-x-4">
-                  <Icon name="Info" size={24} className="text-artist-purple mt-1" />
-                  <div className="space-y-2">
-                    <h4 className="font-playfair font-semibold text-artist-navy">
+                  <Icon name="Lightbulb" size={28} className="text-gothic-gold mt-1" />
+                  <div className="space-y-3">
+                    <h4 className="font-cinzel font-semibold text-mystic-dark text-lg">
                       Процесс создания
                     </h4>
-                    <ul className="text-sm font-open text-gray-600 space-y-1">
-                      <li>• Консультация и обсуждение деталей (1-2 дня)</li>
-                      <li>• Создание эскиза для утверждения (3-5 дней)</li>
-                      <li>• Работа над произведением (1-4 недели)</li>
-                      <li>• Доставка готовой работы</li>
+                    <ul className="text-sm font-cormorant text-mystic-dark/70 space-y-2 leading-relaxed">
+                      <li>• Глубинное интервью и анализ замысла (1-2 встречи)</li>
+                      <li>• Создание концептуальных эскизов (1-2 недели)</li>
+                      <li>• Обсуждение символики и композиции</li>
+                      <li>• Работа над произведением (3-8 недель)</li>
+                      <li>• Представление готовой работы</li>
                     </ul>
                   </div>
                 </div>
@@ -344,10 +436,10 @@ export default function Index() {
               <Button 
                 type="submit"
                 size="lg"
-                className="w-full bg-gradient-to-r from-artist-purple to-artist-cyan hover:from-artist-navy hover:to-artist-purple text-white font-open font-semibold py-6 text-lg"
+                className="w-full bg-gradient-to-r from-mystic-blue via-mystic-green to-mystic-blue hover:from-mystic-dark hover:to-mystic-dark text-mystic-fog font-cinzel font-semibold py-8 text-xl tracking-wider"
               >
-                Отправить заявку
-                <Icon name="Send" size={20} className="ml-2" />
+                Начать творческий диалог
+                <Icon name="Send" size={24} className="ml-3" />
               </Button>
             </form>
           </Card>
@@ -355,58 +447,65 @@ export default function Index() {
       </section>
 
       {/* Контакты */}
-      <section id="contacts" className="py-20 bg-gradient-to-br from-artist-navy to-artist-purple">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-6">
+      <section id="контакты" className="py-24 bg-mystic-dark">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-cinzel font-bold text-mystic-fog mb-6">
               Контакты
             </h2>
-            <p className="text-xl font-open text-white/80 max-w-3xl mx-auto">
-              Свяжитесь со мной для обсуждения вашего проекта или просто поболтать об искусстве
+            <p className="text-xl font-cormorant text-mystic-fog/80 max-w-4xl mx-auto">
+              Для обсуждения проектов, философских бесед об искусстве или посещения выставок
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6 bg-white/10 backdrop-blur-md border-white/20 text-white text-center">
-              <Icon name="Mail" size={32} className="mx-auto mb-4 text-artist-coral" />
-              <h3 className="font-playfair font-semibold text-lg mb-2">Email</h3>
-              <p className="font-open text-white/80">maria@artist.com</p>
+          <div className="grid md:grid-cols-3 gap-10">
+            <Card className="p-8 bg-mystic-blue/10 backdrop-blur-sm border border-mystic-smoke/20 text-mystic-fog text-center">
+              <Icon name="Mail" size={40} className="mx-auto mb-6 text-gothic-gold" />
+              <h3 className="font-cinzel font-semibold text-xl mb-3">Электронная почта</h3>
+              <p className="font-cormorant text-mystic-fog/80 text-lg">alena@petina-art.com</p>
             </Card>
 
-            <Card className="p-6 bg-white/10 backdrop-blur-md border-white/20 text-white text-center">
-              <Icon name="Phone" size={32} className="mx-auto mb-4 text-artist-coral" />
-              <h3 className="font-playfair font-semibold text-lg mb-2">Телефон</h3>
-              <p className="font-open text-white/80">+7 (999) 123-45-67</p>
+            <Card className="p-8 bg-mystic-green/10 backdrop-blur-sm border border-mystic-smoke/20 text-mystic-fog text-center">
+              <Icon name="Phone" size={40} className="mx-auto mb-6 text-gothic-gold" />
+              <h3 className="font-cinzel font-semibold text-xl mb-3">Телефон</h3>
+              <p className="font-cormorant text-mystic-fog/80 text-lg">+7 (3532) 123-45-67</p>
             </Card>
 
-            <Card className="p-6 bg-white/10 backdrop-blur-md border-white/20 text-white text-center">
-              <Icon name="MapPin" size={32} className="mx-auto mb-4 text-artist-coral" />
-              <h3 className="font-playfair font-semibold text-lg mb-2">Студия</h3>
-              <p className="font-open text-white/80">Москва, Арт-квартал</p>
+            <Card className="p-8 bg-mystic-mustard/10 backdrop-blur-sm border border-mystic-smoke/20 text-mystic-fog text-center">
+              <Icon name="MapPin" size={40} className="mx-auto mb-6 text-gothic-gold" />
+              <h3 className="font-cinzel font-semibold text-xl mb-3">Студия</h3>
+              <p className="font-cormorant text-mystic-fog/80 text-lg">Оренбург, Арт-квартал</p>
             </Card>
           </div>
 
-          <div className="text-center mt-12">
-            <div className="flex justify-center space-x-6">
-              <Button variant="ghost" size="lg" className="text-white hover:text-artist-coral">
-                <Icon name="Instagram" size={24} />
+          <div className="text-center mt-16">
+            <div className="flex justify-center space-x-8">
+              <Button variant="ghost" size="lg" className="text-mystic-fog hover:text-gothic-gold">
+                <Icon name="Instagram" size={28} />
               </Button>
-              <Button variant="ghost" size="lg" className="text-white hover:text-artist-coral">
-                <Icon name="Facebook" size={24} />
+              <Button variant="ghost" size="lg" className="text-mystic-fog hover:text-gothic-gold">
+                <Icon name="Facebook" size={28} />
               </Button>
-              <Button variant="ghost" size="lg" className="text-white hover:text-artist-coral">
-                <Icon name="Twitter" size={24} />
+              <Button variant="ghost" size="lg" className="text-mystic-fog hover:text-gothic-gold">
+                <Icon name="Globe" size={28} />
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Футер */}
-      <footer className="bg-artist-navy text-white py-8">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="font-open text-white/80">
-            © 2024 Мария Художник. Все права защищены.
+      {/* Готический футер */}
+      <footer className="bg-gradient-to-t from-black to-mystic-dark text-mystic-fog py-12 border-t border-mystic-smoke/20">
+        <div className="max-w-7xl mx-auto px-6 text-center space-y-4">
+          <div className="flex justify-center items-center space-x-3 mb-4">
+            <Icon name="Eye" size={20} className="text-gothic-gold" />
+            <span className="font-cinzel text-lg">Музей скульптуры имени Петиных</span>
+          </div>
+          <p className="font-cormorant text-mystic-fog/70 text-lg">
+            © 2024 Алёна Петина. Династия оренбургских художников.
+          </p>
+          <p className="font-cormorant text-mystic-fog/50 text-sm">
+            «Искусство — это мост между душой художника и сердцем зрителя»
           </p>
         </div>
       </footer>
