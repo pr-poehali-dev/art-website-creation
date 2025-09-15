@@ -22,44 +22,44 @@ export default function Index() {
   const artworks = [
     {
       id: 1,
-      title: "Туманная глубь",
-      category: "Мистическая живопись",
-      description: "Исследование подсознательных страхов через образы лесной мглы",
-      image: "/img/01e05285-6f09-4d68-a0ad-7b8266c5d108.jpg"
+      title: "Коллективное бессознательное",
+      category: "Психоаналитическая живопись",
+      description: "Монументальная работа 90см, отражающая идеи К.Г. Юнга о 12 архетипах, самости через образ феникса, аниме и анимусе. Масло, холст, 2024-2025г.",
+      image: "https://cdn.poehali.dev/files/70fbb8b2-cee6-496f-96d0-2ad01fc5d4b4.jpg"
     },
     {
       id: 2,
-      title: "Портрет души",
+      title: "Индивидуация",
       category: "Психологический портрет",
-      description: "Внутренний мир человека, выраженный через готические мотивы",
+      description: "Процесс становления личности через интеграцию тени и персоны",
       image: "/img/f43befb1-00b7-4bcd-9fca-72c6543a6f28.jpg"
     },
     {
       id: 3,
-      title: "Символы подсознания",
-      category: "Абстрактная композиция",
-      description: "Архетипические образы в современном прочтении",
+      title: "Герметические символы",
+      category: "Мистическая композиция",
+      description: "Исследование герметической максимы: ‘То, что внизу, подобно тому, что вверху’",
       image: "/img/c8a48cee-c928-453d-9132-d1d8a6692c81.jpg"
     },
     {
       id: 4,
-      title: "Призраки памяти",
-      category: "Концептуальное искусство",
-      description: "Работа с травматическим опытом через визуальные метафоры",
+      title: "Трансформация травмы",
+      category: "Психотерапевтическое искусство",
+      description: "Проработка травматического опыта через символическое выражение и архетипические образы",
       image: "/img/01e05285-6f09-4d68-a0ad-7b8266c5d108.jpg"
     },
     {
       id: 5,
-      title: "Внутренний диалог",
-      category: "Психологический реализм",
-      description: "Борьба противоположностей в человеческой психике",
+      title: "Анима и Анимус",
+      category: "Психологический символизм",
+      description: "Исследование мужского и женского начал в психике через архетипические образы",
       image: "/img/f43befb1-00b7-4bcd-9fca-72c6543a6f28.jpg"
     },
     {
       id: 6,
-      title: "Лабиринт сознания",
-      category: "Сюрреализм",
-      description: "Путешествие по закоулкам человеческого разума",
+      title: "Путь индивидуации",
+      category: "Психоаналитический сюрреализм",
+      description: "Процесс самопознания через осознание бессознательных содержаний психики",
       image: "/img/c8a48cee-c928-453d-9132-d1d8a6692c81.jpg"
     }
   ];
@@ -100,7 +100,7 @@ export default function Index() {
             <div className="space-y-6">
               <div className="inline-flex items-center space-x-4 bg-mystic-dark/10 backdrop-blur-sm rounded-full px-6 py-3 border border-mystic-smoke/20">
                 <Icon name="Sparkles" size={20} className="text-gothic-gold" />
-                <span className="font-cormorant text-mystic-dark text-lg">Род оренбургских художников</span>
+                <span className="font-cormorant text-mystic-dark text-lg">Психоаналитическое искусство</span>
               </div>
               
               <h1 className="text-6xl md:text-8xl font-cinzel font-bold text-mystic-dark leading-tight">
@@ -156,8 +156,8 @@ export default function Index() {
               
               <div className="space-y-6 font-cormorant text-lg leading-relaxed">
                 <p className="text-mystic-fog/90">
-                  Алёна Петина принадлежит к знаменитому роду оренбургских художников и скульпторов, 
-                  чьё творческое наследие увековечено в Музее скульптуры имени Петиных в Оренбурге.
+                  Алёна Петина принадлежит к знаменитому роду художников и скульпторов, 
+                  чьё творческое наследие увековечено в Музее скульптуры имени Петиных.
                 </p>
                 <p className="text-mystic-fog/90">
                   Продолжая семейные традиции, она развивает уникальный стиль, сочетающий 
@@ -176,7 +176,7 @@ export default function Index() {
                     <Icon name="Museum" size={20} className="text-gothic-gold" />
                     <span className="font-cinzel font-semibold">Музей скульптуры</span>
                   </div>
-                  <p className="text-sm text-mystic-fog/70 font-cormorant">имени Петиных, Оренбург</p>
+                  <p className="text-sm text-mystic-fog/70 font-cormorant">имени Петиных</p>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
@@ -222,6 +222,163 @@ export default function Index() {
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-gothic-gold/20 to-mystic-mustard/20 rounded-3xl transform rotate-3 -z-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Детальный разбор основной работы */}
+      <section className="py-24 bg-mystic-dark text-mystic-fog relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-mystic-blue/5 via-transparent to-mystic-green/5"></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <img 
+                src="https://cdn.poehali.dev/files/70fbb8b2-cee6-496f-96d0-2ad01fc5d4b4.jpg"
+                alt="Коллективное бессознательное"
+                className="w-full rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-gothic-gold to-mystic-mustard rounded-2xl p-4 shadow-xl">
+                <div className="text-center">
+                  <div className="text-2xl font-cinzel font-bold text-mystic-dark">90см</div>
+                  <div className="text-sm font-cormorant text-mystic-dark/70">холст • масло</div>
+                  <div className="text-xs font-cormorant text-mystic-dark/70">2024-2025</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-4xl md:text-5xl font-cinzel font-bold text-mystic-fog">
+                  Коллективное<br />
+                  <span className="text-gothic-gold">бессознательное</span>
+                </h2>
+                <div className="h-1 w-32 bg-gradient-to-r from-gothic-gold to-mystic-mustard"></div>
+              </div>
+
+              <div className="space-y-6 font-cormorant text-lg leading-relaxed">
+                <p className="text-mystic-fog/90">
+                  Монументальная работа, воплощающая ключевые концепции К.Г. Юнга о структуре 
+                  человеческой психики и коллективном бессознательном.
+                </p>
+                <p className="text-mystic-fog/90">
+                  В центре композиции — <span className="text-gothic-gold font-semibold">самость</span>, 
+                  изображённая как феникс, символизирующий процесс трансформации и возрождения личности.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6">
+                <Card className="bg-mystic-blue/10 backdrop-blur-sm border border-mystic-smoke/20 p-6">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <Icon name="Eye" size={20} className="text-gothic-gold" />
+                    <span className="font-cinzel font-semibold text-mystic-fog">Тень</span>
+                  </div>
+                  <p className="text-sm font-cormorant text-mystic-fog/80">
+                    Серебряная решётка с плачущими глазами — подавленные аспекты личности
+                  </p>
+                </Card>
+                
+                <Card className="bg-mystic-green/10 backdrop-blur-sm border border-mystic-smoke/20 p-6">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <Icon name="Users" size={20} className="text-gothic-gold" />
+                    <span className="font-cinzel font-semibold text-mystic-fog">Персона</span>
+                  </div>
+                  <p className="text-sm font-cormorant text-mystic-fog/80">
+                    Пять масок с разными выражениями — социальные роли человека
+                  </p>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Символические слои работы */}
+      <section className="py-24 bg-gradient-to-b from-mystic-cream to-mystic-fog">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-cinzel font-bold text-mystic-dark mb-6">
+              Символические слои
+            </h2>
+            <p className="text-xl font-cormorant text-mystic-dark/70 max-w-4xl mx-auto italic">
+              Каждый элемент картины несёт глубокий психоаналитический смысл
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="bg-mystic-fog/70 backdrop-blur-sm border border-mystic-smoke/30 p-8 text-center">
+              <Icon name="Flame" size={40} className="mx-auto mb-4 text-gothic-gold" />
+              <h3 className="text-xl font-cinzel font-semibold text-mystic-dark mb-3">Феникс-самость</h3>
+              <p className="font-cormorant text-mystic-dark/70 text-sm leading-relaxed">
+                Центральный архетип целостности, возрождение через интеграцию противоположностей
+              </p>
+            </Card>
+
+            <Card className="bg-mystic-fog/70 backdrop-blur-sm border border-mystic-smoke/30 p-8 text-center">
+              <Icon name="Sun" size={40} className="mx-auto mb-4 text-gothic-gold" />
+              <h3 className="text-xl font-cinzel font-semibold text-mystic-dark mb-3">Анима и Анимус</h3>
+              <p className="font-cormorant text-mystic-dark/70 text-sm leading-relaxed">
+                Женщина с солнцем, мужчина с луной — архетипы противоположного пола в психике
+              </p>
+            </Card>
+
+            <Card className="bg-mystic-fog/70 backdrop-blur-sm border border-mystic-smoke/30 p-8 text-center">
+              <Icon name="Scroll" size={40} className="mx-auto mb-4 text-gothic-gold" />
+              <h3 className="text-xl font-cinzel font-semibold text-mystic-dark mb-3">Герметическая максима</h3>
+              <p className="font-cormorant text-mystic-dark/70 text-sm leading-relaxed">
+                «То, что внизу, подобно тому, что вверху» — единство микро- и макрокосма
+              </p>
+            </Card>
+
+            <Card className="bg-mystic-fog/70 backdrop-blur-sm border border-mystic-smoke/30 p-8 text-center">
+              <Icon name="TreePine" size={40} className="mx-auto mb-4 text-gothic-gold" />
+              <h3 className="text-xl font-cinzel font-semibold text-mystic-dark mb-3">12 Архетипов</h3>
+              <p className="font-cormorant text-mystic-dark/70 text-sm leading-relaxed">
+                Руки с атрибутами: меч героя, леденец ребёнка, свеча мудреца и другие
+              </p>
+            </Card>
+          </div>
+
+          <div className="mt-16 bg-gradient-to-r from-mystic-blue/10 via-mystic-green/10 to-mystic-mustard/10 rounded-3xl p-12 border border-mystic-smoke/30">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="space-y-4">
+                <h4 className="text-xl font-cinzel font-semibold text-mystic-dark flex items-center">
+                  <Icon name="Crown" size={24} className="text-gothic-gold mr-3" />
+                  Верхний слой
+                </h4>
+                <div className="space-y-3 font-cormorant text-mystic-dark/70">
+                  <p>• Анима (женщина с солнцем)</p>
+                  <p>• Анимус (мужчина с луной)</p>
+                  <p>• Парение в небесах</p>
+                  <p>• Единство противоположностей</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <h4 className="text-xl font-cinzel font-semibold text-mystic-dark flex items-center">
+                  <Icon name="Target" size={24} className="text-gothic-gold mr-3" />
+                  Центральный круг
+                </h4>
+                <div className="space-y-3 font-cormorant text-mystic-dark/70">
+                  <p>• Феникс как самость</p>
+                  <p>• Тень за решёткой</p>
+                  <p>• Персона из пяти масок</p>
+                  <p>• Фон со словом «должен»</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <h4 className="text-xl font-cinzel font-semibold text-mystic-dark flex items-center">
+                  <Icon name="Hand" size={24} className="text-gothic-gold mr-3" />
+                  Внешний круг
+                </h4>
+                <div className="space-y-3 font-cormorant text-mystic-dark/70">
+                  <p>• Дерево познания</p>
+                  <p>• 12 архетипических рук</p>
+                  <p>• Атрибуты каждого архетипа</p>
+                  <p>• Коллективное бессознательное</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -474,7 +631,7 @@ export default function Index() {
             <Card className="p-8 bg-mystic-mustard/10 backdrop-blur-sm border border-mystic-smoke/20 text-mystic-fog text-center">
               <Icon name="MapPin" size={40} className="mx-auto mb-6 text-gothic-gold" />
               <h3 className="font-cinzel font-semibold text-xl mb-3">Студия</h3>
-              <p className="font-cormorant text-mystic-fog/80 text-lg">Оренбург, Арт-квартал</p>
+              <p className="font-cormorant text-mystic-fog/80 text-lg">Москва, Арт-резиденция</p>
             </Card>
           </div>
 
@@ -502,7 +659,7 @@ export default function Index() {
             <span className="font-cinzel text-lg">Музей скульптуры имени Петиных</span>
           </div>
           <p className="font-cormorant text-mystic-fog/70 text-lg">
-            © 2024 Алёна Петина. Династия оренбургских художников.
+            © 2024 Алёна Петина. Психоаналитическое искусство.
           </p>
           <p className="font-cormorant text-mystic-fog/50 text-sm">
             «Искусство — это мост между душой художника и сердцем зрителя»
