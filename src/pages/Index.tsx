@@ -444,12 +444,12 @@ export default function Index() {
               <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Герой</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-red-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-red-700 font-semibold">
-                  Меч воина
+                  Меч
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Стремление к достижениям, преодолению препятствий. Меч символизирует решимость, 
-                храбрость и готовность сражаться за правое дело.
+                Рука крепко сжимает рукоять меча — символ воли к победе, готовности сражаться за справедливость. 
+                Клинок направлен вверх, указывая путь к высшим идеалам.
               </p>
               <div className="mt-4 pt-4 border-t border-red-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -463,15 +463,15 @@ export default function Index() {
               <div className="flex items-center justify-center w-16 h-16 bg-pink-600/10 rounded-full mx-auto mb-4 group-hover:bg-pink-600/20 transition-colors">
                 <Icon name="Candy" size={32} className="text-pink-600" />
               </div>
-              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Невинный</h3>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Ребёнок</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-pink-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-pink-700 font-semibold">
-                  Леденец ребёнка
+                  Леденец
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Чистота намерений, доверие к миру, спонтанность. Леденец воплощает детскую радость, 
-                сладость жизни и веру в лучшее.
+                Детская ладошка держит яркий леденец — символ невинности, чистой радости и доверия к миру. 
+                Сладость как метафора простых удовольствий жизни.
               </p>
               <div className="mt-4 pt-4 border-t border-pink-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -488,12 +488,12 @@ export default function Index() {
               <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Мудрец</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-purple-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-purple-700 font-semibold">
-                  Свеча познания
+                  Свеча
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Поиск истины, глубокие знания, духовное просветление. Свеча символизирует внутренний свет мудрости, 
-                озаряющий тьму неведения.
+                Рука бережно держит горящую свечу — источник света знания в темноте неведения. 
+                Пламя символизирует внутреннее просветление и поиск истины.
               </p>
               <div className="mt-4 pt-4 border-t border-purple-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -505,17 +505,17 @@ export default function Index() {
             {/* Маг */}
             <Card className="bg-gradient-to-br from-indigo-50/80 to-indigo-100/80 backdrop-blur-sm border border-indigo-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
               <div className="flex items-center justify-center w-16 h-16 bg-indigo-600/10 rounded-full mx-auto mb-4 group-hover:bg-indigo-600/20 transition-colors">
-                <Icon name="Wand2" size={32} className="text-indigo-600" />
+                <Icon name="Zap" size={32} className="text-indigo-600" />
               </div>
               <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Маг</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-indigo-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-indigo-700 font-semibold">
-                  Волшебная палочка
+                  Огненный шар
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Трансформация реальности, понимание законов Вселенной. Палочка — инструмент фокусировки воли 
-                и направления энергии для изменения мира.
+                Ладонь излучает пылающий энергетический шар — символ способности трансформировать реальность силой воли. 
+                Огонь воплощает созидательную мощь духа.
               </p>
               <div className="mt-4 pt-4 border-t border-indigo-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -532,12 +532,12 @@ export default function Index() {
               <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Правитель</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-amber-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-amber-700 font-semibold">
-                  Золотая корона
+                  Золотая держава
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Лидерство, ответственность, стремление к порядку. Корона символизирует власть, 
-                мудрое управление и способность нести бремя решений.
+                Рука уверенно держит золотую державу — символ власти, мудрого управления и ответственности за судьбы многих. 
+                Сфера олицетворяет мировой порядок и справедливость.
               </p>
               <div className="mt-4 pt-4 border-t border-amber-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -554,12 +554,12 @@ export default function Index() {
               <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Творец</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-orange-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-orange-700 font-semibold">
-                  Кисть художника
+                  Кисть
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Самовыражение, воображение, создание нового. Кисть воплощает стремление к красоте, 
-                способность воплощать внутренние видения в материальной форме.
+                Пальцы ловко сжимают кисть художника — инструмент воплощения внутренних видений в материальной форме. 
+                Каждый мазок — акт созидания нового мира.
               </p>
               <div className="mt-4 pt-4 border-t border-orange-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -568,20 +568,20 @@ export default function Index() {
               </div>
             </Card>
 
-            {/* Заботливый */}
+            {/* Опекун */}
             <Card className="bg-gradient-to-br from-green-50/80 to-emerald-100/80 backdrop-blur-sm border border-emerald-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
               <div className="flex items-center justify-center w-16 h-16 bg-emerald-600/10 rounded-full mx-auto mb-4 group-hover:bg-emerald-600/20 transition-colors">
-                <Icon name="Heart" size={32} className="text-emerald-600" />
+                <Icon name="HandHeart" size={32} className="text-emerald-600" />
               </div>
-              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Заботливый</h3>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Опекун</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-emerald-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-emerald-700 font-semibold">
-                  Материнское сердце
+                  Белый платок
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Сострадание, забота о других, безусловная любовь. Сердце символизирует материнскую энергию, 
-                готовность жертвовать собой ради блага близких.
+                Протянутая ладонь держит чистый белый платок — символ материнской заботы, комфорта и чистоты. 
+                Платок готов обнять и защитить каждого, кто нуждается в утешении.
               </p>
               <div className="mt-4 pt-4 border-t border-emerald-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -598,12 +598,12 @@ export default function Index() {
               <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Любовник</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-rose-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-rose-700 font-semibold">
-                  Красная роза
+                  Цветок
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Страсть, близость, эмоциональная связь. Роза воплощает красоту любви, нежность чувств 
-                и готовность открыть душу другому человеку.
+                Нежная рука дарит красивый цветок — символ романтической любви, страсти и эмоциональной близости. 
+                Каждый лепесток — частица открытого сердца.
               </p>
               <div className="mt-4 pt-4 border-t border-rose-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -612,20 +612,20 @@ export default function Index() {
               </div>
             </Card>
 
-            {/* Искатель */}
+            {/* Путешественник */}
             <Card className="bg-gradient-to-br from-blue-50/80 to-sky-100/80 backdrop-blur-sm border border-sky-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
               <div className="flex items-center justify-center w-16 h-16 bg-sky-600/10 rounded-full mx-auto mb-4 group-hover:bg-sky-600/20 transition-colors">
                 <Icon name="Compass" size={32} className="text-sky-600" />
               </div>
-              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Искатель</h3>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Путешественник</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-sky-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-sky-700 font-semibold">
-                  Компас странника
+                  Компас
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Жажда приключений, поиск себя, свобода. Компас символизирует внутренний навигатор, 
-                который ведёт к новым горизонтам и открытиям.
+                Ладонь бережно держит компас — символ внутреннего навигатора, который ведёт к новым горизонтам. 
+                Стрелка всегда укажет путь к свободе и приключениям.
               </p>
               <div className="mt-4 pt-4 border-t border-sky-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -634,20 +634,20 @@ export default function Index() {
               </div>
             </Card>
 
-            {/* Разрушитель */}
+            {/* Бунтарь */}
             <Card className="bg-gradient-to-br from-gray-50/80 to-slate-100/80 backdrop-blur-sm border border-slate-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
               <div className="flex items-center justify-center w-16 h-16 bg-slate-600/10 rounded-full mx-auto mb-4 group-hover:bg-slate-600/20 transition-colors">
-                <Icon name="Hammer" size={32} className="text-slate-600" />
+                <Icon name="Bomb" size={32} className="text-slate-600" />
               </div>
-              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Разрушитель</h3>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Бунтарь</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-slate-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-slate-700 font-semibold">
-                  Молот бунтаря
+                  Коктейль Молотова
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Революционность, отказ от условностей, разрушение старого. Молот символизирует силу, 
-                способную сокрушить отжившие структуры.
+                Сжатая в кулак рука держит бутылку с горящей тканью — символ революционного духа и готовности разрушить отжившие структуры. 
+                Огонь как очищающая сила.
               </p>
               <div className="mt-4 pt-4 border-t border-slate-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -659,17 +659,17 @@ export default function Index() {
             {/* Шут */}
             <Card className="bg-gradient-to-br from-cyan-50/80 to-teal-100/80 backdrop-blur-sm border border-teal-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
               <div className="flex items-center justify-center w-16 h-16 bg-teal-600/10 rounded-full mx-auto mb-4 group-hover:bg-teal-600/20 transition-colors">
-                <Icon name="Drama" size={32} className="text-teal-600" />
+                <Icon name="Diamond" size={32} className="text-teal-600" />
               </div>
               <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Шут</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-teal-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-teal-700 font-semibold">
-                  Маска комедии
+                  Карта с джокером
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Радость жизни, спонтанность, мудрость через смех. Маска воплощает способность находить 
-                лёгкость в сложных ситуациях и говорить правду через юмор.
+                Лихо взмахнув рукой с игральной картой-джокером — символ спонтанности, непредсказуемости и мудрости через смех. 
+                Джокер может стать любой картой в игре жизни.
               </p>
               <div className="mt-4 pt-4 border-t border-teal-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
@@ -678,20 +678,20 @@ export default function Index() {
               </div>
             </Card>
 
-            {/* Простой Малый */}
+            {/* Славный Малый */}
             <Card className="bg-gradient-to-br from-stone-50/80 to-stone-100/80 backdrop-blur-sm border border-stone-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
               <div className="flex items-center justify-center w-16 h-16 bg-stone-600/10 rounded-full mx-auto mb-4 group-hover:bg-stone-600/20 transition-colors">
-                <Icon name="Users" size={32} className="text-stone-600" />
+                <Icon name="Gift" size={32} className="text-stone-600" />
               </div>
-              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Простой Малый</h3>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Славный Малый</h3>
               <div className="text-center mb-4">
                 <span className="inline-block bg-stone-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-stone-700 font-semibold">
-                  Рабочие руки
+                  Подарок
                 </span>
               </div>
               <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
-                Честный труд, принадлежность к общности, простые радости. Руки символизируют достоинство труда 
-                и ценность каждого человека.
+                Открытые ладони преподносят подарок — символ щедрости, простой человеческой доброты и готовности делиться. 
+                Подарок олицетворяет достоинство обычного человека.
               </p>
               <div className="mt-4 pt-4 border-t border-stone-200/50">
                 <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
