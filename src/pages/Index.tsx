@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -13,6 +13,9 @@ export default function Index() {
     description: '',
     budget: ''
   });
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,6 +73,29 @@ export default function Index() {
       image: "/img/c8a48cee-c928-453d-9132-d1d8a6692c81.jpg"
     }
   ];
+
+  // Автопрокрутка карусели
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % artworks.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, artworks.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % artworks.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + artworks.length) % artworks.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-mystic-fog via-mystic-cream to-mystic-smoke/20">
@@ -897,42 +923,141 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {artworks.map((artwork, index) => (
-              <Card 
-                key={artwork.id} 
-                className="group bg-mystic-fog/50 backdrop-blur-sm border border-mystic-smoke/30 overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3"
-                style={{ animationDelay: `${index * 150}ms` }}
+          {/* Анимированная карусель */}
+          <div 
+            className="relative bg-gradient-to-r from-mystic-dark/5 via-transparent to-mystic-dark/5 rounded-3xl p-8 overflow-hidden"
+            onMouseEnter={() => setIsAutoPlaying(false)}
+            onMouseLeave={() => setIsAutoPlaying(true)}
+          >
+            {/* Основная карусель */}
+            <div className="relative h-[600px] overflow-hidden rounded-2xl">
+              <div 
+                className="flex transition-transform duration-1000 ease-in-out h-full"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                <div className="relative overflow-hidden">
+                {artworks.map((artwork, index) => (
+                  <div 
+                    key={artwork.id} 
+                    className="min-w-full h-full relative group cursor-pointer"
+                  >
+                    <div className="grid lg:grid-cols-2 h-full">
+                      {/* Изображение с эффектом увеличения */}
+                      <div className="relative overflow-hidden bg-mystic-dark/10 rounded-l-2xl">
+                        <img 
+                          src={artwork.image} 
+                          alt={artwork.title}
+                          className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-125 group-hover:rotate-1"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-mystic-dark/20 group-hover:to-mystic-dark/40 transition-all duration-500"></div>
+                        
+                        {/* Категория на изображении */}
+                        <div className="absolute top-6 left-6">
+                          <span className="bg-gothic-gold/90 text-mystic-dark px-4 py-2 rounded-full text-sm font-cormorant font-semibold backdrop-blur-sm">
+                            {artwork.category}
+                          </span>
+                        </div>
+
+                        {/* Индикатор увеличения */}
+                        <div className="absolute bottom-6 right-6 bg-mystic-dark/70 backdrop-blur-sm rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                          <Icon name="ZoomIn" size={20} className="text-mystic-fog" />
+                        </div>
+                      </div>
+
+                      {/* Информация о произведении */}
+                      <div className="bg-gradient-to-br from-mystic-fog/90 to-mystic-cream/90 backdrop-blur-sm p-12 flex flex-col justify-center rounded-r-2xl">
+                        <div className="space-y-6">
+                          <div className="space-y-3">
+                            <h3 className="text-3xl lg:text-4xl font-cinzel font-bold text-mystic-dark leading-tight">
+                              {artwork.title}
+                            </h3>
+                            <div className="h-1 w-24 bg-gradient-to-r from-gothic-gold to-mystic-mustard"></div>
+                          </div>
+                          
+                          <p className="text-lg font-cormorant text-mystic-dark/80 leading-relaxed">
+                            {artwork.description}
+                          </p>
+
+                          <div className="flex items-center space-x-4 pt-4">
+                            <Button 
+                              className="bg-mystic-blue hover:bg-mystic-dark text-mystic-fog font-cormorant px-8 py-3 rounded-xl transition-all duration-300 hover:shadow-lg"
+                            >
+                              Подробнее
+                              <Icon name="ArrowRight" size={18} className="ml-2" />
+                            </Button>
+                            
+                            <div className="flex items-center text-mystic-dark/60 font-cormorant text-sm">
+                              <Icon name="Eye" size={16} className="mr-2" />
+                              <span>Рассмотреть детально</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Навигационные стрелки */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-mystic-dark/70 hover:bg-mystic-dark/90 text-mystic-fog p-4 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110"
+            >
+              <Icon name="ChevronLeft" size={24} />
+            </button>
+            
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-mystic-dark/70 hover:bg-mystic-dark/90 text-mystic-fog p-4 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110"
+            >
+              <Icon name="ChevronRight" size={24} />
+            </button>
+
+            {/* Индикаторы слайдов */}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3">
+              {artworks.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentSlide === index 
+                      ? 'bg-gothic-gold scale-125' 
+                      : 'bg-mystic-fog/50 hover:bg-mystic-fog/80'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Кнопка паузы/воспроизведения */}
+            <button
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+              className="absolute top-6 right-6 bg-mystic-dark/70 hover:bg-mystic-dark/90 text-mystic-fog p-3 rounded-full backdrop-blur-sm transition-all duration-300"
+            >
+              <Icon name={isAutoPlaying ? "Pause" : "Play"} size={16} />
+            </button>
+          </div>
+
+          {/* Превью галереи */}
+          <div className="mt-16">
+            <div className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
+              {artworks.map((artwork, index) => (
+                <div
+                  key={`preview-${artwork.id}`}
+                  onClick={() => goToSlide(index)}
+                  className={`flex-shrink-0 w-32 h-24 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 ${
+                    currentSlide === index 
+                      ? 'ring-4 ring-gothic-gold scale-110' 
+                      : 'hover:scale-105 opacity-70 hover:opacity-100'
+                  }`}
+                >
                   <img 
                     src={artwork.image} 
                     alt={artwork.title}
-                    className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-mystic-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute bottom-6 left-6 right-6">
-                      <span className="text-xs font-cormorant bg-gothic-gold text-mystic-dark px-3 py-1 rounded-full">
-                        {artwork.category}
-                      </span>
-                    </div>
-                  </div>
                 </div>
-                <CardContent className="p-8 space-y-4">
-                  <h3 className="text-2xl font-cinzel font-semibold text-mystic-dark">
-                    {artwork.title}
-                  </h3>
-                  <p className="text-mystic-dark/60 font-cormorant leading-relaxed">
-                    {artwork.description}
-                  </p>
-                  <div className="pt-2">
-                    <Button variant="ghost" className="text-mystic-blue hover:text-gothic-gold font-cormorant p-0">
-                      Подробнее <Icon name="ArrowRight" size={16} className="ml-2" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div className="text-center mt-16">
