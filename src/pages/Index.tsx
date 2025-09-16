@@ -391,6 +391,331 @@ export default function Index() {
         </div>
       </section>
 
+      {/* 12 Архетипов Юнга */}
+      <section className="py-24 bg-gradient-to-b from-mystic-smoke via-mystic-blue/10 to-mystic-green/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(0,0,0,0.1)_80%)]"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-cinzel font-bold text-mystic-dark mb-6">
+              Двенадцать Архетипов<br />
+              <span className="text-gothic-gold">коллективного бессознательного</span>
+            </h2>
+            <div className="h-1 w-32 bg-gradient-to-r from-gothic-gold to-mystic-mustard mx-auto mb-8"></div>
+            <p className="text-xl font-cormorant text-mystic-dark/70 max-w-4xl mx-auto italic leading-relaxed">
+              По теории К.Г. Юнга, в коллективном бессознательном заложены универсальные образы-архетипы, 
+              проявляющиеся в мифах, снах и творчестве всех культур. Каждая рука в композиции держит символический предмет, 
+              воплощающий сущность архетипа.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+            {/* Герой */}
+            <Card className="bg-gradient-to-br from-red-50/80 to-red-100/80 backdrop-blur-sm border border-red-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-red-600/10 rounded-full mx-auto mb-4 group-hover:bg-red-600/20 transition-colors">
+                <Icon name="Sword" size={32} className="text-red-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Герой</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-red-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-red-700 font-semibold">
+                  Меч воина
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Стремление к достижениям, преодолению препятствий. Меч символизирует решимость, 
+                храбрость и готовность сражаться за правое дело.
+              </p>
+              <div className="mt-4 pt-4 border-t border-red-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Кто не рискует, тот не пьёт шампанского»
+                </p>
+              </div>
+            </Card>
+
+            {/* Невинный */}
+            <Card className="bg-gradient-to-br from-pink-50/80 to-pink-100/80 backdrop-blur-sm border border-pink-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-pink-600/10 rounded-full mx-auto mb-4 group-hover:bg-pink-600/20 transition-colors">
+                <Icon name="Candy" size={32} className="text-pink-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Невинный</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-pink-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-pink-700 font-semibold">
+                  Леденец ребёнка
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Чистота намерений, доверие к миру, спонтанность. Леденец воплощает детскую радость, 
+                сладость жизни и веру в лучшее.
+              </p>
+              <div className="mt-4 pt-4 border-t border-pink-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «В каждом человеке есть солнце»
+                </p>
+              </div>
+            </Card>
+
+            {/* Мудрец */}
+            <Card className="bg-gradient-to-br from-purple-50/80 to-purple-100/80 backdrop-blur-sm border border-purple-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-purple-600/10 rounded-full mx-auto mb-4 group-hover:bg-purple-600/20 transition-colors">
+                <Icon name="Flame" size={32} className="text-purple-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Мудрец</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-purple-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-purple-700 font-semibold">
+                  Свеча познания
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Поиск истины, глубокие знания, духовное просветление. Свеча символизирует внутренний свет мудрости, 
+                озаряющий тьму неведения.
+              </p>
+              <div className="mt-4 pt-4 border-t border-purple-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Знание — свет, а невежество — тьма»
+                </p>
+              </div>
+            </Card>
+
+            {/* Маг */}
+            <Card className="bg-gradient-to-br from-indigo-50/80 to-indigo-100/80 backdrop-blur-sm border border-indigo-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-indigo-600/10 rounded-full mx-auto mb-4 group-hover:bg-indigo-600/20 transition-colors">
+                <Icon name="Wand2" size={32} className="text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Маг</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-indigo-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-indigo-700 font-semibold">
+                  Волшебная палочка
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Трансформация реальности, понимание законов Вселенной. Палочка — инструмент фокусировки воли 
+                и направления энергии для изменения мира.
+              </p>
+              <div className="mt-4 pt-4 border-t border-indigo-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Воля + Воображение = Волшебство»
+                </p>
+              </div>
+            </Card>
+
+            {/* Правитель */}
+            <Card className="bg-gradient-to-br from-yellow-50/80 to-amber-100/80 backdrop-blur-sm border border-amber-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-amber-600/10 rounded-full mx-auto mb-4 group-hover:bg-amber-600/20 transition-colors">
+                <Icon name="Crown" size={32} className="text-amber-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Правитель</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-amber-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-amber-700 font-semibold">
+                  Золотая корона
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Лидерство, ответственность, стремление к порядку. Корона символизирует власть, 
+                мудрое управление и способность нести бремя решений.
+              </p>
+              <div className="mt-4 pt-4 border-t border-amber-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Тяжела ты, шапка Мономаха»
+                </p>
+              </div>
+            </Card>
+
+            {/* Творец */}
+            <Card className="bg-gradient-to-br from-orange-50/80 to-orange-100/80 backdrop-blur-sm border border-orange-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-orange-600/10 rounded-full mx-auto mb-4 group-hover:bg-orange-600/20 transition-colors">
+                <Icon name="Paintbrush" size={32} className="text-orange-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Творец</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-orange-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-orange-700 font-semibold">
+                  Кисть художника
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Самовыражение, воображение, создание нового. Кисть воплощает стремление к красоте, 
+                способность воплощать внутренние видения в материальной форме.
+              </p>
+              <div className="mt-4 pt-4 border-t border-orange-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Творчество — высшая форма существования»
+                </p>
+              </div>
+            </Card>
+
+            {/* Заботливый */}
+            <Card className="bg-gradient-to-br from-green-50/80 to-emerald-100/80 backdrop-blur-sm border border-emerald-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-emerald-600/10 rounded-full mx-auto mb-4 group-hover:bg-emerald-600/20 transition-colors">
+                <Icon name="Heart" size={32} className="text-emerald-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Заботливый</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-emerald-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-emerald-700 font-semibold">
+                  Материнское сердце
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Сострадание, забота о других, безусловная любовь. Сердце символизирует материнскую энергию, 
+                готовность жертвовать собой ради блага близких.
+              </p>
+              <div className="mt-4 pt-4 border-t border-emerald-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Любовь — это глагол, а не существительное»
+                </p>
+              </div>
+            </Card>
+
+            {/* Любовник */}
+            <Card className="bg-gradient-to-br from-rose-50/80 to-rose-100/80 backdrop-blur-sm border border-rose-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-rose-600/10 rounded-full mx-auto mb-4 group-hover:bg-rose-600/20 transition-colors">
+                <Icon name="Flower" size={32} className="text-rose-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Любовник</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-rose-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-rose-700 font-semibold">
+                  Красная роза
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Страсть, близость, эмоциональная связь. Роза воплощает красоту любви, нежность чувств 
+                и готовность открыть душу другому человеку.
+              </p>
+              <div className="mt-4 pt-4 border-t border-rose-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Любить — значит смотреть в одном направлении»
+                </p>
+              </div>
+            </Card>
+
+            {/* Искатель */}
+            <Card className="bg-gradient-to-br from-blue-50/80 to-sky-100/80 backdrop-blur-sm border border-sky-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-sky-600/10 rounded-full mx-auto mb-4 group-hover:bg-sky-600/20 transition-colors">
+                <Icon name="Compass" size={32} className="text-sky-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Искатель</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-sky-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-sky-700 font-semibold">
+                  Компас странника
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Жажда приключений, поиск себя, свобода. Компас символизирует внутренний навигатор, 
+                который ведёт к новым горизонтам и открытиям.
+              </p>
+              <div className="mt-4 pt-4 border-t border-sky-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Не все те, кто странствуют, потеряны»
+                </p>
+              </div>
+            </Card>
+
+            {/* Разрушитель */}
+            <Card className="bg-gradient-to-br from-gray-50/80 to-slate-100/80 backdrop-blur-sm border border-slate-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-slate-600/10 rounded-full mx-auto mb-4 group-hover:bg-slate-600/20 transition-colors">
+                <Icon name="Hammer" size={32} className="text-slate-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Разрушитель</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-slate-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-slate-700 font-semibold">
+                  Молот бунтаря
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Революционность, отказ от условностей, разрушение старого. Молот символизирует силу, 
+                способную сокрушить отжившие структуры.
+              </p>
+              <div className="mt-4 pt-4 border-t border-slate-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Чтобы создать новое, нужно разрушить старое»
+                </p>
+              </div>
+            </Card>
+
+            {/* Шут */}
+            <Card className="bg-gradient-to-br from-cyan-50/80 to-teal-100/80 backdrop-blur-sm border border-teal-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-teal-600/10 rounded-full mx-auto mb-4 group-hover:bg-teal-600/20 transition-colors">
+                <Icon name="Drama" size={32} className="text-teal-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Шут</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-teal-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-teal-700 font-semibold">
+                  Маска комедии
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Радость жизни, спонтанность, мудрость через смех. Маска воплощает способность находить 
+                лёгкость в сложных ситуациях и говорить правду через юмор.
+              </p>
+              <div className="mt-4 pt-4 border-t border-teal-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «Смех — лучшее лекарство»
+                </p>
+              </div>
+            </Card>
+
+            {/* Простой Малый */}
+            <Card className="bg-gradient-to-br from-stone-50/80 to-stone-100/80 backdrop-blur-sm border border-stone-200/50 p-6 group hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center justify-center w-16 h-16 bg-stone-600/10 rounded-full mx-auto mb-4 group-hover:bg-stone-600/20 transition-colors">
+                <Icon name="Users" size={32} className="text-stone-600" />
+              </div>
+              <h3 className="text-xl font-cinzel font-bold text-mystic-dark text-center mb-3">Простой Малый</h3>
+              <div className="text-center mb-4">
+                <span className="inline-block bg-stone-600/10 px-3 py-1 rounded-full text-sm font-cormorant text-stone-700 font-semibold">
+                  Рабочие руки
+                </span>
+              </div>
+              <p className="text-sm font-cormorant text-mystic-dark/80 leading-relaxed text-center">
+                Честный труд, принадлежность к общности, простые радости. Руки символизируют достоинство труда 
+                и ценность каждого человека.
+              </p>
+              <div className="mt-4 pt-4 border-t border-stone-200/50">
+                <p className="text-xs font-cormorant text-mystic-dark/60 italic text-center">
+                  «В простоте — высшая мудрость»
+                </p>
+              </div>
+            </Card>
+          </div>
+
+          {/* Дополнительная информация */}
+          <div className="bg-gradient-to-r from-mystic-dark/5 via-gothic-gold/5 to-mystic-dark/5 rounded-3xl p-12 border border-mystic-smoke/30">
+            <h3 className="text-3xl font-cinzel font-bold text-mystic-dark text-center mb-8">
+              Символизм в композиции
+            </h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-gothic-gold/20 to-mystic-mustard/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="CircleDot" size={32} className="text-gothic-gold" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-dark mb-3">Расположение рук</h4>
+                <p className="text-sm font-cormorant text-mystic-dark/70 leading-relaxed">
+                  12 рук образуют круг вокруг центра — символ завершённости и цикличности человеческого опыта
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-gothic-gold/20 to-mystic-mustard/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Sparkles" size={32} className="text-gothic-gold" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-dark mb-3">Предметы-атрибуты</h4>
+                <p className="text-sm font-cormorant text-mystic-dark/70 leading-relaxed">
+                  Каждый предмет несёт глубокий символический смысл, знакомый всем культурам мира
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-gothic-gold/20 to-mystic-mustard/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Infinity" size={32} className="text-gothic-gold" />
+                </div>
+                <h4 className="font-cinzel font-semibold text-mystic-dark mb-3">Универсальность</h4>
+                <p className="text-sm font-cormorant text-mystic-dark/70 leading-relaxed">
+                  Архетипы проявляются в мифах, сказках и снах всех народов, объединяя человечество
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Семь смертных грехов и древо познания */}
       <section className="py-24 bg-gradient-to-b from-mystic-dark via-mystic-dark to-mystic-smoke relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.3)_80%)]"></div>
